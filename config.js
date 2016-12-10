@@ -1,3 +1,5 @@
 module.exports = {
-   database: "mongodb://localhost/job"
+   database: "mongodb://localhost/job",
+
+   secret: "big fox running in the wild"
 }

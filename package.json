@@ -17,12 +17,15 @@
   },
   "homepage": "https://github.com/mercyg/job-application-manager#readme",
   "dependencies": {
+    "bcrypt": "^1.0.1",
+    "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-jwt": "^5.1.0",
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.7.2",
     "morgan": "^1.7.0",
+    "node-twitter-api": "^1.8.0",
     "nodemon": "^1.11.0"
   }
 }
