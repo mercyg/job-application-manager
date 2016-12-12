@@ -24,10 +24,22 @@ var applicationSchema = new Schema({
      followUp : {
        type: Boolean
      },
-     //did you get accepted or pending or rejected
-     status: {
+     phoneScreen:{
        type: String
      },
+     technicalInterview: {
+       type: String
+     },
+     codingChallege: {
+       type: String
+     },
+     onSite: {
+       type: String
+     },
+     offered: {
+       type: String
+     },
+     //did you get accepted or pending or rejected
      creator: {
        type: ObjectId,
        ref: "User",
