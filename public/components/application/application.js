@@ -37,9 +37,29 @@ app.service("ApplicationService", ["$http", function($http){
                    return response.data;
               })
       }
+
+      this.deleteApp = function(app){
+           return $http.delete("/api/application/" + app.id)
+                .then(function(response){
+                     return response.data;
+                }, function(response){
+                     console.log("Error" + response.status + ":" + response.statusText);
+                })
+      }
+
+       this.editApp = function(app){
+           return $http.put("/api/application/" + app._id, app)
+                .then(function(response){
+                     return response.data;
+                }, function(response){
+                     console.log("Error" + response.status + ":" + response.statusText)
+                })
+       }
+
 }]);
 
 app.controller("ApplicationController", ["$scope", "ApplicationService",function($scope, ApplicationService){
+        $scope.editMode = true;
          (function getApplication(){
              ApplicationService.getApplication()
                 .then(function(application){
@@ -126,6 +146,21 @@ app.controller("ApplicationController", ["$scope", "ApplicationService",function
     $scope.myChartObject.options = {
         'title': 'My Application Status'
     };
+
+   $scope.deleteApp = function(app, index){
+        ApplicationService.deleteApp(app, index)
+              .then(function(response){
+                  $scope.application.splice(index,1);
+              })
+   }
+
+  $scope.editApp = function(app){
+    console.log(app);
+      ApplicationService.editApp(app)
+            .then(function(response){
+                $scope.application = response;
+            })
+  }
 
 
 }]);

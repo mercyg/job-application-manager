@@ -13,15 +13,33 @@
                <th>Follow UP</th>
              </tr>
            </thead>
-           <tbody >
-             <tr class="sucess" ng-repeat="app in application track by $index">
+           <tbody ng-repeat="app in application track by $index">
+             <tr class="table-success" >
               <td>{{app.companyName}}</td>
               <td>{{app.contact}}</td>
               <td>{{app.email}}</td>
               <td>{{app.dateApplied.toString().slice(0,10)}}</td>
               <td>{{app.applicationSummary}}</td>
               <td>{{app.followUp}}</td>
+              <td><a ng-click="deleteApp(app,$index)">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a> </td>
+              <td> <a ng-click="editMode = !editMode">
+          <span class="glyphicon glyphicon-edit"></span>
+        </a></td>
              </tr>
+             <tr ng-show="!editMode">
+               <td><input type="text" class="form-control" ng-model="app.companyName"></td>
+               <td><input  type="text" class="form-control" ng-model="app.contact"></td>
+               <td><input  type="text" class="form-control"  ng-model="app.email"></td>
+               <td><input  type="text" class="form-control"  ng-model="app.dateApplied"></td>
+               <td><input  type="text" class="form-control"  ng-model="app.applicationSummary"></td>
+               <td><input  type="text" class="form-control"  ng-model="app.followUp"></td>
+               <td><a ng-click="editApp(app)">
+          <span class="glyphicon glyphicon-ok"></span>
+        </a></td>
+               <tr>
+
            </tbody>
         </table>
        </div>

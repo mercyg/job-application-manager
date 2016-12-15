@@ -52,4 +52,26 @@ applicationRoute.route("/technical")
                })
             })
 
+applicationRoute.route("/:appId")
+          .delete(function(req, res){
+              Application.findOneAndRemove(req.params.appId, function(err, deletedApp){
+                  if(err){
+                     res.status(500).send(err);
+                  }else{
+                      res.send(deletedApp);
+                  }
+              })
+          })
+
+applicationRoute.route("/:appId")
+          .put(function(req, res){
+              Application.findByAndUpdate(req.params.appId, req.body, {new:true}, function(err, newApplication){
+                if(err){
+                    res.send(500).send(err);
+                }else{
+                    res.send(newApplication);
+                }
+              })
+          })
+
 module.exports = applicationRoute;
