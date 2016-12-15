@@ -21,10 +21,10 @@ authRouter.post("/signup", function(req,res){
 })
 
 authRouter.post("/login", function(req, res){
-  User.findOne({userName:req.body.userName, password: req.body.password}, function(err, user){
+  User.findOne({userName:req.body.userName}, function(err, user){
      if(err) return res.status(500).send(err);
      if(user === null){
-       return res.status(401).send({success: false, message: "Username or password provided doesn't match anything in our system"})
+       return res.status(401).send({success: false, message: "Username provided doesn't match anything in our system"})
      }else if(user){
        user.checkPassword(req.body.password, function(err, match){
          if(err) throw (err);
@@ -51,5 +51,7 @@ authRouter.post("/change-password", function(req, res){
     }
   })
 })
+
+
 
 module.exports = authRouter;

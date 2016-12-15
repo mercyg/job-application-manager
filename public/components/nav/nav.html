@@ -12,13 +12,13 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!-- <ul class="nav navbar-nav">
-                <li class="active"><a href="#/books">All Job Applied<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="#/hom">All Job Applied<span class="sr-only">(current)</span></a></li>
             </ul> -->
             <ul class="nav navbar-nav navbar-right">
-                    <li ng-show="UserService.isAuthenticated()"><a href="#/login">Login</a></li>
-                    <li ng-show="UserService.isAuthenticated()"><a href="#/signup">Signup</a></li>
-                    <li ng-hide="UserService.isAuthenticated()"><a href="#/logout">Logout</a></li>
-                    <!-- <li ng-show="UserService.isAuthenticated()"><a href="#/addbook">My Books</a></li> -->
+                    <li ng-hide="UserService.isAuthenticated()"><a href="#/login">Login</a></li>
+                    <li ng-hide="UserService.isAuthenticated()"><a href="#/signup">Signup</a></li>
+                    <li ng-show="UserService.isAuthenticated()"><a href="#/logout">Logout</a></li>
+                    <li ng-show="UserService.isAuthenticated()"><a href="#/application">All Application</a></li>
                     <!-- <li ng-show="UserService.isAuthenticated()"><a href="#/">Setting</a></li> -->
             </ul>
         </div>

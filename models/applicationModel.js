@@ -22,23 +22,29 @@ var applicationSchema = new Schema({
      },
      //did you follow up or not
      followUp : {
-       type: Boolean
-     },
-     phoneScreen:{
        type: String
      },
-     technicalInterview: {
-       type: String
-     },
-     codingChallege: {
-       type: String
-     },
-     onSite: {
-       type: String
-     },
-     offered: {
-       type: String
-     },
+      phoneScreen: {
+          type: String,
+          default: null
+        },
+        technicalInterview: {
+          type: String,
+          default: null
+        },
+        codingChallege: {
+          type: String,
+          default: null
+        },
+        onSite: {
+          type: String,
+          default: null
+        },
+        offered: {
+          type: String,
+          default: null
+        },
+
      //did you get accepted or pending or rejected
      creator: {
        type: ObjectId,

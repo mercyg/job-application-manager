@@ -1,4 +1,4 @@
-var app = angular.module("JobApp", ["ngRoute", "Auth"]);
+var app = angular.module("JobApp", ["ngRoute", "Auth", "googlechart"]);
 
 app.config(function($routeProvider){
     $routeProvider
@@ -8,7 +8,11 @@ app.config(function($routeProvider){
       })
        .when("/application",{
           templateUrl: "components/application/application.html",
-          controller: "AppController"
+          controller: "ApplicationController"
+       })
+       .when("/addApplication", {
+          templateUrl: "components/application/addApplication.html",
+          controller: "AddController"
        })
 
 })

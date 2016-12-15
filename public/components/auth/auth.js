@@ -13,7 +13,7 @@ app.config(["$routeProvider", function($routeProvider){
 
         .when("/logout", {
              controller: "LogoutController",
-             templateUrl: ""
+             template: ""
         })
 
 }])
@@ -50,7 +50,7 @@ app.service("UserService", ["$http", "TokenService", function($http, TokenServic
      }
 
      this.isAuthenticated = function(){
-        return !!TokenService.getToken
+        return !!TokenService.getToken();
      }
 }])
 

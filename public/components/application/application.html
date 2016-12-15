@@ -1,5 +1,36 @@
 <div class="container">
   <div class="row">
-    <h1>This the application page</h1>
-  </div>
+     <div class="col-xs-12">
+          <h2 class="text-center">Applied Jobs</h2>
+        <table class="table">
+           <thead>
+             <tr>
+               <th>Compnay Name</th>
+               <th>Contact</th>
+               <th>Email</th>
+               <th>Date Applied</th>
+               <th>Application Summary</th>
+               <th>Follow UP</th>
+             </tr>
+           </thead>
+           <tbody >
+             <tr class="sucess" ng-repeat="app in application track by $index">
+              <td>{{app.companyName}}</td>
+              <td>{{app.contact}}</td>
+              <td>{{app.email}}</td>
+              <td>{{app.dateApplied.toString().slice(0,10)}}</td>
+              <td>{{app.applicationSummary}}</td>
+              <td>{{app.followUp}}</td>
+             </tr>
+           </tbody>
+        </table>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+         <button type="button" class="btn btn-sucesss">Record your Application </button>
+       </div>
+     </div>
 </div>
+
+<div google-chart chart="myChartObject" style="height:600px; width:100%;"></div>

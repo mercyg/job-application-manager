@@ -21,10 +21,35 @@ applicationRoute.route("/")
             if(err){
               res.status(500).send(err);
             }else{
-              res.staus(201).send(newApplication);
+              res.status(201).send(newApplication);
             }
          })
    })
+ applicationRoute.route("/applied")
+      .get(function(req,res){
+        Application.find().distinct('user_id').count(function (err, count) {
+             res.send({count: count})
+     });
+  })
 
+
+applicationRoute.route("/onsitecount")
+   .get(function(req,res){
+      Application.count({onSite: {$ne:null}, creator: req.user}, function(err, count){
+         res.send({count: count})
+      })
+   })
+applicationRoute.route("/codingchallege")
+      .get(function(req,res){
+         Application.count({codingChallege: {$ne:null}, creator: req.user}, function(err, count){
+            res.send({count: count})
+         })
+      })
+applicationRoute.route("/technical")
+            .get(function(req,res){
+               Application.count({technicalInterview: {$ne:null}, creator: req.user}, function(err, count){
+                  res.send({count: count})
+               })
+            })
 
 module.exports = applicationRoute;
