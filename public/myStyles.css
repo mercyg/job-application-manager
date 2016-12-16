@@ -1,0 +1,33 @@
+.jumbotron {
+    display: block;
+    min-height: 550px;
+    max-width: 100%;
+    margin-top:-15px;
+    margin-bottom: 20px;
+    background-image: url("img/ag-pvymsbis-volkan-olmez.jpg");
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "poiret";
+}
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.navbar{
+  margin-bottom: 14px;
+  background-color: rgb(68,81,96);
+  border-color: rgb(68,81,96);
+}
+
+.jumbotron-text{
+   margin-left: 65px;
+   margin-top:200px;
+   text-align: left;
+   color: darkslategray;
+}
+
+.jumbotron h1{
+  color: darkslategray;
+}

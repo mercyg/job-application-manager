@@ -27,6 +27,9 @@
               <td> <a ng-click="editMode = !editMode">
           <span class="glyphicon glyphicon-edit"></span>
         </a></td>
+        <td><button type="button" class="btn btn-info btn-xs">
+          <span class="glyphicon glyphicon-plus-sign"></span> Add Status
+        </button></td>
              </tr>
              <tr ng-show="!editMode">
                <td><input type="text" class="form-control" ng-model="app.companyName"></td>
@@ -38,17 +41,17 @@
                <td><a ng-click="editApp(app)">
           <span class="glyphicon glyphicon-ok"></span>
         </a></td>
-               <tr>
 
+               <tr>
            </tbody>
         </table>
        </div>
      </div>
      <div class="row">
        <div class="col-xs-12 col-sm-offset-4 col-sm-4">
-         <button type="button" class="btn btn-sucesss">Record your Application </button>
+        <a href="#addApplication"><button type="button" class="btn btn-success">Record your Application </button></a>
        </div>
      </div>
-</div>
 
+</div>
 <div google-chart chart="myChartObject" style="height:600px; width:100%;"></div>

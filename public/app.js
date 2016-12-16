@@ -4,7 +4,6 @@ app.config(function($routeProvider){
     $routeProvider
       .when("/", {
           templateUrl: "components/home/home.html"
-
       })
        .when("/application",{
           templateUrl: "components/application/application.html",

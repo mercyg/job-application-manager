@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-9 well">
+        <h2 class="col-sm-offset-3">Add Your Application</h2>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Company Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" placeholder="Company Name" ng-model="app.companyName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" placeholder="Email Adress" ng-model="app.email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Contact:</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" placeholder="Enter the phone Number" ng-model="app.contact">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Summary:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" placeholder="Resume or Cover Letter or Both" ng-model="app.applicationSummary">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Follow Up:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" placeholder="Did you follow up?" ng-model="app.followUp">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary" ng-click="addApp(app)">Submit</button>
+                </div>
+            </div>
+
+        </form>
+      </div>
+    </div>

@@ -65,7 +65,7 @@ applicationRoute.route("/:appId")
 
 applicationRoute.route("/:appId")
           .put(function(req, res){
-              Application.findByAndUpdate(req.params.appId, req.body, {new:true}, function(err, newApplication){
+              Application.findByIdAndUpdate(req.params.appId, req.body, {new:true}, function(err, newApplication){
                 if(err){
                     res.send(500).send(err);
                 }else{
