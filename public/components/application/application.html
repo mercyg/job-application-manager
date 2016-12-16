@@ -1,57 +1,63 @@
 <div class="container">
-  <div class="row">
-     <div class="col-xs-12">
-          <h2 class="text-center">Applied Jobs</h2>
-        <table class="table">
-           <thead>
-             <tr>
-               <th>Compnay Name</th>
-               <th>Contact</th>
-               <th>Email</th>
-               <th>Date Applied</th>
-               <th>Application Summary</th>
-               <th>Follow UP</th>
-             </tr>
-           </thead>
-           <tbody ng-repeat="app in application track by $index">
-             <tr class="table-success" >
-              <td>{{app.companyName}}</td>
-              <td>{{app.contact}}</td>
-              <td>{{app.email}}</td>
-              <td>{{app.dateApplied.toString().slice(0,10)}}</td>
-              <td>{{app.applicationSummary}}</td>
-              <td>{{app.followUp}}</td>
-              <td><a ng-click="deleteApp(app,$index)">
-          <span class="glyphicon glyphicon-remove"></span>
-        </a> </td>
-              <td> <a ng-click="editMode = !editMode">
-          <span class="glyphicon glyphicon-edit"></span>
-        </a></td>
-        <td><button type="button" class="btn btn-info btn-xs">
-          <span class="glyphicon glyphicon-plus-sign"></span> Add Status
-        </button></td>
-             </tr>
-             <tr ng-show="!editMode">
-               <td><input type="text" class="form-control" ng-model="app.companyName"></td>
-               <td><input  type="text" class="form-control" ng-model="app.contact"></td>
-               <td><input  type="text" class="form-control"  ng-model="app.email"></td>
-               <td><input  type="text" class="form-control"  ng-model="app.dateApplied"></td>
-               <td><input  type="text" class="form-control"  ng-model="app.applicationSummary"></td>
-               <td><input  type="text" class="form-control"  ng-model="app.followUp"></td>
-               <td><a ng-click="editApp(app)">
-          <span class="glyphicon glyphicon-ok"></span>
-        </a></td>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center">Applied Jobs</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Compnay Name</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Date Applied</th>
+                        <th>Application Summary</th>
+                        <th>Follow UP</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="app in application track by $index">
+                    <tr class="table-success">
+                        <td>{{app.companyName}}</td>
+                        <td>{{app.contact}}</td>
+                        <td>{{app.email}}</td>
+                        <td>{{app.dateApplied.toString().slice(0,10)}}</td>
+                        <td>{{app.applicationSummary}}</td>
+                        <td>{{app.followUp}}</td>
+                        <td>
+                            <a ng-click="deleteApp(app,$index)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-info btn-xs" ng-click="editMode = !editMode">
+                                <span class="glyphicon glyphicon-plus-sign"></span>
+                                Add Status
+                            </button>
+                        </td>
+                    </tr>
 
-               <tr>
-           </tbody>
-        </table>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-xs-12 col-sm-offset-4 col-sm-4">
-        <a href="#addApplication"><button type="button" class="btn btn-success">Record your Application </button></a>
-       </div>
-     </div>
+                    <tr ng-show="!editMode">
+                        <td><label for="name"> On Site </label><input type="text" class="form-control" ng-model="app.onSite"></td>
+                        <td><label for="code"> Coding Challenge </label><input type="text" class="form-control" ng-model="app.codingChallege"></td>
+                        <td><label for="interview">Technical Interview</label><input type="text" class="form-control" ng-model="app.technicalInterview"></td>
 
-</div>
-<div google-chart chart="myChartObject" style="height:600px; width:100%;"></div>
+                        <td>
+                            <a ng-click="editApp(app)">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </a>
+                        </td>
+  
+                      </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+                    <a href="#addApplication">
+                        <button type="button" class="btn btn-success">Add Application
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div google-chart chart="myChartObject" style="height:600px; width:100%;"></div>

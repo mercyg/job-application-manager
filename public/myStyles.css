@@ -1,6 +1,6 @@
 .jumbotron {
     display: block;
-    min-height: 550px;
+    min-height: 650px;
     max-width: 100%;
     margin-top:-15px;
     margin-bottom: 20px;
@@ -8,7 +8,6 @@
     background-position: 0% 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
     font-family: "poiret";
 }
 .container-fluid{
@@ -30,4 +29,20 @@
 
 .jumbotron h1{
   color: darkslategray;
+}
+#app{
+  display: block;
+  min-height: 650px;
+  max-width: 100%;
+  margin-top:-15px;
+  margin-bottom: 20px;
+  background-image: url("img/hdmqsqxjnbe-markus-spiske.jpg");
+  background-position: 0% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: darkslategray;
+  font-family: "poiret";
+}
+.well{
+      margin-top: 45px;
 }

@@ -19,6 +19,9 @@
                     <li ng-hide="UserService.isAuthenticated()"><a href="#/signup">Signup</a></li>
                     <li ng-show="UserService.isAuthenticated()"><a href="#/logout">Logout</a></li>
                     <li ng-show="UserService.isAuthenticated()"><a href="#/application">All Application</a></li>
+                    <li ng-show="UserService.isAuthenticated()"><a href="#/profile" >
+                      <span class="glyphicon glyphicon-user"></span>
+                  </a></li>
                     <!-- <li ng-show="UserService.isAuthenticated()"><a href="#/">Setting</a></li> -->
             </ul>
         </div>

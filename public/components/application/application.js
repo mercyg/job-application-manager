@@ -65,11 +65,11 @@ app.service("ApplicationService", ["$http", function($http) {
             })
     }
 
-
 }]);
 
 app.controller("ApplicationController", ["$scope", "ApplicationService", function($scope, ApplicationService) {
     $scope.editMode = true;
+    $scope.status = false;
     (function getApplication() {
         ApplicationService.getApplication()
             .then(function(application) {
@@ -180,6 +180,9 @@ app.controller("ApplicationController", ["$scope", "ApplicationService", functio
                 $scope.application = response;
             })
     }
+
+
+
 
 }]);
 

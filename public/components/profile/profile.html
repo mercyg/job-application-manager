@@ -1,0 +1,45 @@
+<div class="container-fluid" id="profile">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-9 well">
+        <h2 class="col-sm-offset-3">Profile</h2>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="control-label col-sm-2">First Name:</label>
+                <div class="col-sm-8">
+                    <p ng-show="edit">{{profile.firstName}}</p>
+                    <span ng-show="!edit"><input type="text" class="form-control"  ng-model="user.firstName"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Last Name:</label>
+                <div class="col-sm-8">
+                  <p ng-show="edit">{{profile.lastName}}</p>
+                    <span ng-show="!edit"><input type="text" class="form-control"  ng-model="user.lastName"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">User Name:</label>
+                <div class="col-sm-8">
+                  <p ng-show="edit">{{profile.userName}}</p>
+                  <span ng-show="!edit">  <input type="text" class="form-control"  ng-model="user.userName"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-8">
+                  <p ng-show="edit">{{profile.email}}</p>
+                  <span ng-show="!edit"><input type="email" class="form-control"  ng-model="user.email"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary" ng-click="edit = !edit">Edit</button>
+                  <button type="submit" class="btn btn-primary" ng-show="!edit" ng-click="editProfile(user)">Save</button>
+                </div>
+            </div>
+
+        </form>
+      </div>
+    </div>
