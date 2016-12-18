@@ -1,5 +1,5 @@
 module.exports = {
-   database: "mongodb://localhost/job",
+    database: "process.env.MONGODB_URI || mongodb://localhost/job",
 
-   secret: "big fox running in the wild"
+    secret: "big fox running in the wild"
 }
