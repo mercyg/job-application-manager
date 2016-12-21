@@ -7,17 +7,17 @@
         <form name="userForm" ng-submit="submitForm()" novalidate>
             <div class="form-group" ng-class="{'has-error' : userForm.fname.$invalid && !userForm.fname.$pristine}">
                 <label for="fname">First Name</label>
-                <input type="text" name="fname" class="form-control" ng-model="user.fname" required>
+                <input type="text" name="fname" class="form-control" ng-model="user.firstName" required>
                 <p ng-show="userForm.fname.$invalid && !userForm.fname.$pristine" class="help-block">Your name is required</p>
             </div>
             <div class="form-group" ng-class="{'has-error' : userForm.lname.$invalid && !userForm.lname.$pristine}">
                 <label for="lname">Last Name</label>
-                <input type="text" name="lname" class="form-control" ng-model="user.lname" required>
+                <input type="text" name="lname" class="form-control" ng-model="user.lastName" required>
                 <p ng-show="userForm.lname.$invalid && !userForm.lname.$pristine" class="help-block">Your name is required</p>
             </div>
             <div class="form-group" ng-class="{'has-error' : userForm.username.$invalid && !userForm.username.$pristine}">
                 <label for="username">Username</label>
-                <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+                <input type="text" name="username" class="form-control" ng-model="user.userName" ng-minlength="3" ng-maxlength="8">
                 <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short</p>
                 <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long</p>
             </div>
@@ -37,12 +37,12 @@
 
             <div class="form-group" ng-class="{'has-error' : userForm.city.$invalid && !userForm.city.$pristine && submitted}">
                 <label for="username">City</label>
-                <input type="text" name="city" class="form-control" ng-model="user.city" required>
+                <input type="text" name="city" class="form-control" ng-model="user.userAddress.state" required>
                 <p ng-show="userForm.city.$invalid && !userForm.city.$pristine" class="help-block">Your city is required</p>
             </div>
             <div class="form-group">
-                <label for="username">State</label>
-                <input type="text" id="state" class="form-control"  ng-model="user.state">
+                <label for="username">Address</label>
+                <input type="text" id="state" class="form-control"  ng-model="user.userAddress.address">
             </div>
 
 
