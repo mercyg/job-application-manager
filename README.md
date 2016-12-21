@@ -1,7 +1,7 @@
 # Job Search Tracking Management
 ==========================================
 
-This app allows user to keep track of their job application. It is intended for user who are applying for web developer position.  It is integrated with Google Graphs to show how many companies the user has applied and also how many times the applicant has been called for coding challenge, onSite, technical interview or got an offer. It is a secured authentication by using bcrypt before being persisted. 
+This app allows user to keep track of their job application. It is intended for user who are applying for web developer position.  It is integrated with Google Graphs to show how many companies the user has applied and also how many times the applicant has been called for coding challenge, onSite, technical interview or got an offer. It is a secured authentication by using bcrypt before being persisted.
 
 # User Stories
 ===========================================
@@ -19,3 +19,4 @@ This app allows user to keep track of their job application. It is intended for 
 * NodeJS
 * Express
 * Mongoose
+* Google Angular Graphs
